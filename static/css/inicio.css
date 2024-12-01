@@ -1,0 +1,41 @@
+* {
+    font-family:'Work Sans', sans-serif;
+}
+
+.formulario-item-50 {
+  float: left;
+  width: 49%;
+  margin-bottom: 20px;
+}
+
+.formulario-item-50 input {
+  width: 100%;
+  float: left;
+}
+
+.formulario-item-50.item-esquerda {
+  padding-right: 27px;
+}
+
+@media only screen and (max-width: 767px) {
+  .formulario-item-50 {
+    width: 100%
+  }
+
+  .formulario-item-50.item-esquerda {
+    padding-right: 0;
+  }
+}
+
+.formulario-item-100 {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.formulario-item-100 input {
+  width: 100%;
+}
+
+.formulario-item-100 textarea {
+  width: 100%;
+}

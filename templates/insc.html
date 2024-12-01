@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/insc.css" media="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TESTE</title>
+    <title>Esse é um Teste</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulário de Inscrição</h2>
+        <div class="form-container">
+            <form>
+                <div class="input-name">
+                    <label for="name">Nome:</label>
+                    <input type="text" placeholder="Nome" class="text-name" required id="nome">
+                    <span>
+                        <label for="name">Sobrenome:</label>
+                        <input type="text" placeholder="Sobrenome" class="text-name" required id="sobrenome">
+                    </span>
+                </div>
+                <div class="input-name">
+                    <label>E-mail:</label>
+                    <input type="email" placeholder="E-mail" required class="text-name" id="email">
+                </div>
+                <div class="input-name">
+                    <label>CPF:</label>
+                    <input type="text"
+                           placeholder="CPF"
+                           class="name"
+                           maxlength="14" 
+                           OnKeyPress="formatar('###.###.###-##',this)"
+                           required id="cpf">
+                    <span>
+                        <label>Gênero:</label>
+                        <input type="radio" name="genero" class="radio-button" checked>
+                        <label>Masculino</label>
+
+                        <input type="radio" name="genero" class="radio-button">
+                        <label>Feminino</label>
+                    </span>
+                </div>
+                <div class="input-name">
+                    <label>Tel.:</label>
+                    <input type="text"
+                           placeholder="Telefone"
+                           class="name"
+                           maxlength="15" 
+                           OnKeyPress="formatar('(##) #####-####',this)"
+                           required id="telefone">
+                    <span>
+                        <label>Data Nasc.:</label>
+                        <input type="date" 
+                               placeholder="Data Nascimento" 
+                               class="name"
+                               required id="datanasc">
+                    </span>
+                </div>
+
+                <div class="input-name">
+                    <label>Cidade:</label>
+                    <input type="text" placeholder="Cidade" class="name" required id="cidade">
+                    <span>
+                        <label for="estado">Estado:</label>
+                        <select id="estado">
+                            <option selected disabled value="">Rondônia (RO)</option>
+                            <option>Acre (AC)</option>
+                            <option>Alagoas (AL)</option>
+                            <option>Amapá (AP)</option>
+                            <option>Amazonas (AM)</option>
+                            <option>Bahia (BA)</option>
+                            <option>Ceará (CE)</option>
+                            <option>Distrito Federal (DF)</option>
+                            <option>Espírito Santo (ES)</option>
+                            <option>Goiás (GO)</option>
+                            <option>Maranhão (MA)</option>
+                            <option>Mato Grosso (MT)</option>
+                            <option>Mato Grosso do Sul (MS)</option>
+                            <option>Minas Gerais (MG)</option>
+                            <option>Pará (PA)</option>
+                            <option>Paraíba (PB)</option>
+                            <option>Paraná (PR)</option>
+                            <option>Pernambuco (PE)</option>
+                            <option>Piauí (PI)</option>
+                            <option>Rio de Janeiro (RJ)</option>
+                            <option>Rio Grande do Norte (RN)</option>
+                            <option>Rio Grande do Sul (RS)</option>
+                            <option>Rondônia (RO)</option>
+                            <option>Roraima (RR)</option>
+                            <option>Santa Catarina (SC)</option>
+                            <option>São Paulo (SP)</option>
+                            <option>Sergipe (SE)</option>
+                            <option>Tocantins (TO)</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="input-name">
+                    <label>Equipe:</label>
+                    <input type="text" placeholder="Equipe" class="text-name" id="equipe">
+                </div>
+
+                <div class="input-name">
+                    <label>Equipe 200k:</label>
+                    <input type="text" placeholder="Em caso de equipe, de um nome a Equipe 200k" class="text-name" id="equipe200k">
+                </div>
+
+                <div class="input-name">
+                    <label>Membros:</label>
+                    <input type="text" placeholder="Informe os nomes dos membros da Equipe" class="text-name" id="membros">
+                </div>
+
+                <div class="input-radio">
+                    <label for="camiseta">Camiseta</label>
+                    <label>
+                        <input type="radio" name="camiseta" value="PP" checked>PP
+                    </label>
+                    <label>
+                        <input type="radio" name="camiseta" value="P">P
+                    </label>
+                    <label>
+                        <input type="radio" name="camiseta" value="M">M
+                    </label>
+                    <label>
+                        <input type="radio" name="camiseta" value="G">G
+                    </label>
+                    <label>
+                        <input type="radio" name="camiseta" value="GG">GG
+                    </label>
+    
+                    <span>
+                        <label for="categoria">Categoria da prova</label>
+                        <label>
+                            <input type="radio" name="categoria" value="Solo" checked>Solo - 200km
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" value="Dupla">Dupla - 100km/cada
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" value="Quarteto">Quarteto - 50km/cada
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" value="Octeto">Octeto - 25km/cada
+                        </label>
+                    </span>
+                </div>
+
+                <button class="botao" type="submit">  CONTINUAR  </button>
+
+
+            </form>
+
+        </div>
+    </div>
+    
+</body>
+
+<script>  
+    function formatar(mascara, documento) {
+      let i = documento.value.length;
+      let saida = '#';
+      let texto = mascara.substring(i);
+      while (texto.substring(0, 1) != saida && texto.length ) {
+        documento.value += texto.substring(0, 1);
+        i++;
+        texto = mascara.substring(i);
+      }
+    }
+  </script>
+
+</html>

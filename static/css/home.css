@@ -1,0 +1,80 @@
+* {
+    font-family:'Work Sans', sans-serif;
+}
+body {
+    background:linear-gradient(-45deg, #adcafa, #b8cceb, #9cb3d1, #2682f3);
+    display:block;
+    /*justify-content:left;*/
+}
+
+.container {
+    display:flex;
+    align-items:center;
+    justify-content: right;
+    max-width: 100%;  /* 800px; */
+    height: auto;
+}
+.container_tower {
+    margin-top: 20px;
+    margin-right: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:right;
+    width:350px;
+    height:300px;
+    border:none;
+    background-color:#0c131d;
+    text-align:center;
+    border-radius:20px;
+}
+.container_tower h1 {
+    text-align:center;
+    color:#fff;
+}
+
+.dropdown {
+    padding:10px;
+    background-color:transparent;
+    border:none;
+    color:#fff;
+    font-size: 14px;
+    outline:0;
+    
+}
+
+.drop-label {
+    padding:10px;
+    background-color:transparent;
+    border:none;
+    color:#fff;
+    font-size: 14px;
+    outline:0;    
+}
+
+.container_tower input {
+    background-color:transparent;
+    padding:5px;
+    margin-bottom:20px;
+    border:none;
+    border-bottom:1px solid #fff;
+    color:#fff;
+    /*Esse outline tira as bordas externa do input*/
+    outline:0;
+}
+.container_tower input:hover {
+    text-shadow:0px 0px 1px #ec3535;
+}
+.container_tower .submit button {
+    padding:10px;
+    background-color:transparent;
+    border:none;
+    color:#fff;
+    font-size: 16px;
+    outline:0;
+}
+.container_tower button:hover {
+    border:1px solid #223852;;
+    box-shadow:0px 0px 10px #00ffff;
+    border-radius:10px;
+}

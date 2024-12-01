@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/inscricao.css" media="">
+    <title>Inscrição</title>
+</head>
+<body>
+    <div>
+        <h1 id="titulo">Formulário de Inscrição</h1>
+        <p id="subtitulo">Desafio 200k</p>
+    </div>
+    <form>
+        <fieldset class="grupo">
+            <div class="col">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+            </div>
+            <div class="col">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text"
+                       name="nome" 
+                       id="nome"
+                       style="text-transform:uppercase"
+                       required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text"
+                       name="sobrenome"
+                       id="sobrenome"
+                       style="text-transform:uppercase"
+                       required>
+            </div>
+            <div class="campo">
+                <label for="cpf">CPF</label>
+                <input type="text" 
+                       name="cpf" 
+                       id="cpf" 
+                       maxlength="14" 
+                       OnKeyPress="formatar('###.###.###-##',this)"
+                       required>
+            </div>
+            <div class="campo">
+                <label for="dtnasc">Data Nascimento</label>
+                <input type="date" name="dtnasc" id="dtnasc" required>
+            </div>
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input type="text" 
+                       name="telefone" 
+                       id="tel" 
+                       maxlength="16" 
+                       OnKeyPress="formatar('(##) #####-#####',this)"
+                       required>
+            </div>
+            <div class="campo">
+                <label for="genero">Gênero</label>
+                <label>
+                    <input type="radio" name="genero" value="M" checked>Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genero" value="F">Feminino
+                </label>
+            </div>
+            <div class="campo">
+                <label for="camiseta">Camiseta</label>
+                <label>
+                    <input type="radio" name="camiseta" value="PP" checked>PP
+                </label>
+                <label>
+                    <input type="radio" name="camiseta" value="P">P
+                </label>
+                <label>
+                    <input type="radio" name="camiseta" value="M">M
+                </label>
+                <label>
+                    <input type="radio" name="camiseta" value="G">G
+                </label>
+                <label>
+                    <input type="radio" name="camiseta" value="GG">GG
+                </label>
+            </div>
+            <div class="campo">
+                <label for="categoria">Categoria da prova</label>
+                <label>
+                    <input type="radio" name="categoria" value="Solo" checked>Solo - 200km
+                </label>
+                <label>
+                    <input type="radio" name="categoria" value="Dupla">Dupla - 100km/cada
+                </label>
+                <label>
+                    <input type="radio" name="categoria" value="Quarteto">Quarteto - 50km/cada
+                </label>
+                <label>
+                    <input type="radio" name="categoria" value="Octeto">Octeto - 25km/cada
+                </label>
+            </div>
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade" required>
+            </div>
+            <div class="campo">
+                <label for="estado">Estado</label>
+                <select id="estado">
+                    <option selected disabled value="">Selecione</option>
+                    <option>Acre (AC)</option>
+                    <option>Alagoas (AL)</option>
+                    <option>Amapá (AP)</option>
+                    <option>Amazonas (AM)</option>
+                    <option>Bahia (BA)</option>
+                    <option>Ceará (CE)</option>
+                    <option>Distrito Federal (DF)</option>
+                    <option>Espírito Santo (ES)</option>
+                    <option>Goiás (GO)</option>
+                    <option>Maranhão (MA)</option>
+                    <option>Mato Grosso (MT)</option>
+                    <option>Mato Grosso do Sul (MS)</option>
+                    <option>Minas Gerais (MG)</option>
+                    <option>Pará (PA)</option>
+                    <option>Paraíba (PB)</option>
+                    <option>Paraná (PR)</option>
+                    <option>Pernambuco (PE)</option>
+                    <option>Piauí (PI)</option>
+                    <option>Rio de Janeiro (RJ)</option>
+                    <option>Rio Grande do Norte (RN)</option>
+                    <option>Rio Grande do Sul (RS)</option>
+                    <option>Rondônia (RO)</option>
+                    <option>Roraima (RR)</option>
+                    <option>Santa Catarina (SC)</option>
+                    <option>São Paulo (SP)</option>
+                    <option>Sergipe (SE)</option>
+                    <option>Tocantins (TO)</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="equipe">Equipe</label>
+                <input type="text" name="equipe" id="equipe">
+            </div>
+            <div class="campo">
+                <label for="equipe200k">Nome da Equipe Desafio 200k</label>
+                <input type="text" 
+                       name="equipe200k" 
+                       id="equipe200k" 
+                       placeholder="Em caso de equipe, defina um nome para o Desafio 200k">
+            </div>
+            <div class="campo">
+                <label for="menbros">Membros da Equipe</label>
+                <input type="text" 
+                       name="menbros"
+                       id="menbros"
+                       placeholder="Informe os nomes dos membros da equipe">
+            </div>
+
+        </fieldset>
+        <fieldset class="grupo">
+            <div id="check">
+                <input type="checkbox" name="termo" id="termo" value="Aceito" required>
+                <label for="campo">Aceito os termos desse regulamento</label> 
+            </div>
+        </fieldset>
+
+        <button class="botao" type="submit">  CONTINUAR  </button>
+        
+    </form>       
+</body>
+
+<script>  
+    function formatar(mascara, documento) {
+      let i = documento.value.length;
+      let saida = '#';
+      let texto = mascara.substring(i);
+      while (texto.substring(0, 1) != saida && texto.length ) {
+        documento.value += texto.substring(0, 1);
+        i++;
+        texto = mascara.substring(i);
+      }
+    }
+  </script>
+
+</html>
